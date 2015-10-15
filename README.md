@@ -23,4 +23,4 @@ Now you can use the following `npm` commands:
 * `npm run build-dev`: Same as `npm run build`, but unminified and with source maps.
 * `npm run watch`: Constantly watches changes to JS and SCSS files and compiles them. Code is unminified and with source maps.
 * `npm run test`: Runs JS tests in your shell.
-* `npm run test-debug`: Runs JS tests by opening up Chrome. Debug tests by adding breakpoints in den dev tools.
+* `npm run test-debug`: Runs JS tests by opening up Chrome. Debug tests by adding breakpoints in Chrome dev tools.
