@@ -25,3 +25,7 @@ Now you can use one of the following `npm` commands:
 * `npm run watch`: Constantly watches changes to JS and SCSS files and compiles them. Code is unminified and with source maps.
 * `npm run test`: Runs JS tests in your shell.
 * `npm run test-debug`: Runs JS tests by opening up Chrome. Debug tests by adding breakpoints in Chrome dev tools.
+
+# That’s it?
+
+Jup, that’s it. Turn that watcher on, write in ES6 syntax, lint your JavaScript, autoprefix your Sass code, be awesome.
