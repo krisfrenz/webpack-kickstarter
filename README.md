@@ -6,7 +6,7 @@ Kickstart your web project with a fresh breeze of awesomeness.
 
 * Showcase for Sass compilation with [webpack](http://webpack.github.io/).
 * Sass folder structure is based on [ITCSS](https://speakerdeck.com/dafed/managing-css-projects-with-itcss).
-* Comments in the [main SCSS file](https://github.com/isellsoap/webpack-kickstarter/blob/master/src/styles/main.scss) for explain what ITCSS is all about. Especially helpful for developers not familiar with this kind of stuff.
+* Comments in the [main SCSS file](https://github.com/isellsoap/webpack-kickstarter/blob/master/src/styles/main.scss) explain what ITCSS is all about. Especially helpful for developers not familiar with this kind of stuff.
 * Write JavaScript in ES6 syntax (both in source files and in test files). Code gets transpiled to ES5. I added a [hello world test example](https://github.com/isellsoap/webpack-kickstarter/blob/master/test/scripts/hello/index.spec.js) to get you started.
 * Bonus: [ESLint](http://eslint.org/), [Autoprefixer](https://github.com/postcss/autoprefixer) and some helpful `npm` commands are included.
 
