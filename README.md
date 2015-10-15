@@ -1,12 +1,13 @@
 # webpack-kickstarter
 
-Kickstart your project with a fresh breeze of awesomeness.
+Kickstart your web project with a fresh breeze of awesomeness.
 
 # What is this repo about?
 
 * Showcase for Sass compilation with [webpack](http://webpack.github.io/).
 * Sass folder structure is based on [ITCSS](https://speakerdeck.com/dafed/managing-css-projects-with-itcss).
 * Write JavaScript in ES6 syntax (both in source files and in test files). Code gets transpiled to ES5.
+* Bonus: [ESLint](http://eslint.org/), [Autoprefixer](https://github.com/postcss/autoprefixer) and some helpful `npm` commands are included.
 
 # How to start?
 
