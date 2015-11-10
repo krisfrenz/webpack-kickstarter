@@ -13,17 +13,39 @@ module.exports = {
   },
   module: {
     preLoaders: [
-      {test: /\.js$/, loader: 'eslint', exclude: /node_modules/}
+      {
+        test: /\.js$/,
+        loader: 'eslint',
+        exclude: /node_modules/
+      }
     ],
     loaders: [
       // images
-      {test: /\.(png|svg)$/, loader: 'file?name=../images/[name].[ext]'},
+      {
+        test: /\.(png|svg)$/,
+        loader: 'file?name=../images/[name].[ext]'
+      },
       // fonts
-      {test: /\.(otf|ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/, loader: 'file?name=../fonts/[name].[ext]'},
+      {
+        test: /\.(otf|ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+        loader: 'file?name=../fonts/[name].[ext]'
+      },
       // scripts
-      {test: /\.js$/, loader: 'babel', exclude: /node_modules/},
+      {
+        test: /\.js$/,
+        loader: 'babel',
+        query: {
+          cacheDirectory: true,
+          presets: ['es2015']
+        },
+        exclude: /node_modules/
+      },
       // styles
-      {test: /\.scss$/, loader: ExtractTextPlugin.extract('style', 'css?sourceMap!autoprefixer!sass?sourceMap'), exclude: /node_modules/}
+      {
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract('style', 'css?sourceMap!autoprefixer!sass?sourceMap'),
+        exclude: /node_modules/
+      }
     ]
   },
   plugins: [
