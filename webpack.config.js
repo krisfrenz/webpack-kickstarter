@@ -1,6 +1,9 @@
 var Clean = require('clean-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var path = require('path');
+var argv = require('yargs').argv;
+
+var sourceMapPrefix = argv.d ? '?sourceMap' : '';
 
 module.exports = {
   entry: './src/scripts/main.js',
@@ -43,7 +46,7 @@ module.exports = {
       // styles
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('style', 'css?sourceMap!autoprefixer!sass?sourceMap'),
+        loader: ExtractTextPlugin.extract('style', 'css' + sourceMapPrefix + '!autoprefixer!sass' + sourceMapPrefix),
         exclude: /node_modules/
       }
     ]
