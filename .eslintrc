@@ -1,19 +1,7 @@
 {
-  'ecmaFeatures': {
-    'arrowFunctions': true,
-    'blockBindings': true,
-    'classes': true,
-    'defaultParams': true,
-    'destructuring': true,
-    'forOf': true,
-    'generators': false,
-    'modules': true,
-    'objectLiteralComputedProperties': true,
-    'objectLiteralDuplicateProperties': false,
-    'objectLiteralShorthandMethods': true,
-    'objectLiteralShorthandProperties': true,
-    'spread': true,
-    'superInFunctions': true
+  parserOptions: {
+    ecmaVersion: 6,
+    sourceType: 'module'
   },
   'env': {
     'browser': true,
@@ -71,7 +59,6 @@
     'no-caller': 2,                               // http://eslint.org/docs/rules/no-caller
     'no-div-regex': 1,                            // http://eslint.org/docs/rules/no-div-regex
     'no-else-return': 2,                          // http://eslint.org/docs/rules/no-else-return
-    'no-empty-label': 2,                          // http://eslint.org/docs/rules/no-empty-label
     'no-eval': 2,                                 // http://eslint.org/docs/rules/no-eval
     'no-extend-native': 1,                        // http://eslint.org/docs/rules/no-extend-native
     'no-extra-bind': 2,                           // http://eslint.org/docs/rules/no-extra-bind
@@ -81,6 +68,7 @@
     'no-implied-eval': 2,                         // http://eslint.org/docs/rules/no-implied-eval
     'no-invalid-this': 1,                         // http://eslint.org/docs/rules/no-invalid-this
     'no-iterator': 2,                             // http://eslint.org/docs/rules/no-iterator
+    'no-labels': 2,                               // http://eslint.org/docs/rules/no-labels
     'no-lone-blocks': 2,                          // http://eslint.org/docs/rules/no-lone-blocks
     'no-loop-func': 2,                            // http://eslint.org/docs/rules/no-loop-func
     'no-multi-spaces': 2,                         // http://eslint.org/docs/rules/no-multi-spaces
@@ -152,6 +140,7 @@
       beforeColon: false,
       afterColon: true
     }],
+    'keyword-spacing': 2,                         // http://eslint.org/docs/rules/keyword-spacing
     'lines-around-comment': [1, {                 // http://eslint.org/docs/rules/lines-around-comment
       beforeBlockComment: true,
       afterBlockComment: false,
@@ -195,8 +184,6 @@
       after: false
     }],
     'semi': [2, 'always'],                        // http://eslint.org/docs/rules/semi
-    'space-after-keywords': [1, 'always'],        // http://eslint.org/docs/rules/space-after-keywords
-    'space-before-blocks': [1, 'always'],         // http://eslint.org/docs/rules/space-before-blocks
     'space-before-function-paren': [1, {          // http://eslint.org/docs/rules/space-before-function-paren
       anonymous: 'always',
       named: 'never'
@@ -204,7 +191,6 @@
     ],
     'space-in-parens': [1, 'never'],              // http://eslint.org/docs/rules/space-in-parens
     'space-infix-ops': 2,                         // http://eslint.org/docs/rules/space-infix-ops
-    'space-return-throw-case': 1,                 // http://eslint.org/docs/rules/space-return-throw-case
     'space-unary-ops': [2, {                      // http://eslint.org/docs/rules/space-unary-ops
       words: true,
       nonwords: false
