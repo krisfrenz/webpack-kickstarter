@@ -7,9 +7,6 @@ var sourceMapPrefix = argv.d ? '?sourceMap' : '';
 
 module.exports = {
   entry: './src/scripts/main.js',
-  eslint: {
-    configFile: '.eslintrc'
-  },
   output: {
     path: './dist/scripts',
     filename: 'app.js'
@@ -20,7 +17,12 @@ module.exports = {
         test: /\.js$/,
         loader: 'eslint',
         exclude: /node_modules/
-      }
+      },
+      {
+       test: /\.scss$/,
+       loader: 'stylelint',
+       exclude: /node_modules/
+     }
     ],
     loaders: [
       // images
@@ -50,6 +52,12 @@ module.exports = {
         exclude: /node_modules/
       }
     ]
+  },
+  eslint: {
+    configFile: '.eslintrc'
+  },
+  stylelint: {
+    configFile: '.stylelintrc'
   },
   plugins: [
     new Clean(['./dist']),
