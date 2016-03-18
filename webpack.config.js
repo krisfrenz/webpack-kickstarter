@@ -56,7 +56,7 @@ module.exports = {
     new CleanPlugin(['./dist']),
     new StyleLintPlugin({
       syntax: 'scss',
-      files: 'src/styles/**/*.s?(c|a)ss'
+      files: 'src/styles/**/*.scss'
     }),
     new ExtractTextPlugin('../styles/app.css')
   ],
