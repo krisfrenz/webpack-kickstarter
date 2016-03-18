@@ -1,5 +1,6 @@
-var Clean = require('clean-webpack-plugin');
+var CleanPlugin = require('clean-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var StyleLintPlugin = require('stylelint-webpack-plugin');
 var path = require('path');
 var argv = require('yargs').argv;
 
@@ -17,12 +18,7 @@ module.exports = {
         test: /\.js$/,
         loader: 'eslint',
         exclude: /node_modules/
-      },
-      {
-       test: /\.scss$/,
-       loader: 'stylelint',
-       exclude: /node_modules/
-     }
+      }
     ],
     loaders: [
       // images
@@ -56,11 +52,12 @@ module.exports = {
   eslint: {
     configFile: '.eslintrc'
   },
-  stylelint: {
-    configFile: '.stylelintrc'
-  },
   plugins: [
-    new Clean(['./dist']),
+    new CleanPlugin(['./dist']),
+    new StyleLintPlugin({
+      syntax: 'scss',
+      files: 'src/styles/**/*.s?(c|a)ss'
+    }),
     new ExtractTextPlugin('../styles/app.css')
   ],
   resolve: {
