@@ -17,7 +17,7 @@ module.exports = {
     preLoaders: [
       {
         test: /\.js$/,
-        loader: 'eslint',
+        loader: 'eslint-loader',
         exclude: /node_modules/
       }
     ],
@@ -25,17 +25,17 @@ module.exports = {
       // images
       {
         test: /\.(png|svg)$/,
-        loader: 'file?name=../images/[name].[ext]'
+        loader: 'file-loader?name=../images/[name].[ext]'
       },
       // fonts
       {
         test: /\.(otf|ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
-        loader: 'file?name=../fonts/[name].[ext]'
+        loader: 'file-loader?name=../fonts/[name].[ext]'
       },
       // scripts
       {
         test: /\.js$/,
-        loader: 'babel',
+        loader: 'babel-loader',
         query: {
           cacheDirectory: true,
           presets: ['es2015']
@@ -45,7 +45,7 @@ module.exports = {
       // styles
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('style', 'css' + sourceMapPrefix + '!postcss!sass' + sourceMapPrefix),
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader' + sourceMapPrefix + '!postcss-loader!sass-loader' + sourceMapPrefix),
         exclude: /node_modules/
       }
     ]
