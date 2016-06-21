@@ -1,6 +1,7 @@
 var CleanPlugin = require('clean-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var StyleLintPlugin = require('stylelint-webpack-plugin');
+var autoprefixer = require('autoprefixer');
 var path = require('path');
 var argv = require('yargs').argv;
 
@@ -44,10 +45,13 @@ module.exports = {
       // styles
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('style', 'css' + sourceMapPrefix + '!autoprefixer!sass' + sourceMapPrefix),
+        loader: ExtractTextPlugin.extract('style', 'css' + sourceMapPrefix + '!postcss!sass' + sourceMapPrefix),
         exclude: /node_modules/
       }
     ]
+  },
+  postcss: function () {
+    return [autoprefixer];
   },
   eslint: {
     configFile: '.eslintrc'
