@@ -1,18 +1,36 @@
 var webpackConfig = require('./webpack.config');
 
+webpackConfig.cache = true;
 webpackConfig.devtool = 'inline-source-map';
+webpackConfig.module.preLoaders = [
+  {
+    test: /\.js$/,
+    loader: 'babel-loader',
+    include: /test\/scripts/,
+    query: {
+      cacheDirectory: true
+    }
+  },
+  {
+    test: /\.js$/,
+    loader: 'babel-istanbul',
+    include: /src\/scripts/,
+    query: {
+      cacheDirectory: true
+    }
+  }
+];
 
 module.exports = function (config) {
   config.set({
     frameworks: ['jasmine'],
     files: [
-      './node_modules/jasmine-expect/dist/jasmine-matchers.js',
-      './test/scripts/**/*.spec.js'
+      './test/index.js'
     ],
     preprocessors: {
-      './test/scripts/**/*.spec.js': ['webpack', 'sourcemap']
+      './test/index.js': ['webpack', 'sourcemap']
     },
-    reporters: ['dots'],
+    reporters: ['dots', 'coverage'],
     webpack: webpackConfig,
     colors: true,
     webpackMiddleware: {
