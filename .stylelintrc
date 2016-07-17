@@ -1,5 +1,8 @@
 {
   "extends": "stylelint-config-standard",
+  "plugins": [
+    "stylelint-scss"
+  ],
   "rules": {
     "block-no-empty": true,
     "block-no-single-line": true,
@@ -18,6 +21,7 @@
     "selector-max-empty-lines": 0,
     "selector-max-specificity": "0,2,0",
     "selector-no-id": true,
-    "string-quotes": "double"
+    "string-quotes": "double",
+    "scss/selector-no-redundant-nesting-selector": true
   }
 }
