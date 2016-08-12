@@ -1,10 +1,12 @@
 {
   "scripts": {
+    "build": "webpack -p --progress --colors",
+    "build-dev": "webpack -d --progress --colors",
+    "packages-check": "ncu",
+    "packages-update": "ncu -u",
     "test": "karma start",
     "test-debug": "karma start karma-debug.conf.js",
-    "watch": "webpack -d --watch --progress --colors",
-    "build-dev": "webpack -d --progress --colors",
-    "build": "webpack -p --progress --colors"
+    "watch": "webpack -d --watch --progress --colors"
   },
   "devDependencies": {
     "autoprefixer": "6.4.0",
