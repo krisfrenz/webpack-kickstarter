@@ -18,10 +18,10 @@
     "number-no-trailing-zeros": true,
     "rule-nested-empty-line-before": "always",
     "rule-non-nested-empty-line-before": "always",
+    "scss/selector-no-redundant-nesting-selector": true,
     "selector-max-empty-lines": 0,
     "selector-max-specificity": "0,2,0",
     "selector-no-id": true,
-    "string-quotes": "double",
-    "scss/selector-no-redundant-nesting-selector": true
+    "string-quotes": "double"
   }
 }
