@@ -22,9 +22,11 @@ Now you can use one of the following `npm` commands:
 
 * `npm run build`: Outputs the final JS and CSS file once. Code is minified and without source maps (production-ready).
 * `npm run build-dev`: Same as `npm run build`, but unminified and with source maps.
-* `npm run watch`: Constantly watches changes to JS and SCSS files and compiles them. Code is unminified and with source maps.
+* `npm run packages-check`: Checks if there are new versions of the npm packages listed in your `package.json`.
+* `npm run packages-update`: Same as `npm run packages-check`, but updates the `package.json` with the latest versions of your dependencies.
 * `npm run test`: Runs JS tests in your shell.
 * `npm run test-debug`: Runs JS tests by opening up Chrome. Debug tests by adding breakpoints in Chrome dev tools.
+* `npm run watch`: Constantly watches changes to JS and SCSS files and compiles them. Code is unminified and with source maps.
 
 # That’s it?
 
