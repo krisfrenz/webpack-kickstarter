@@ -1,11 +1,11 @@
-var CleanPlugin = require('clean-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var StyleLintPlugin = require('stylelint-webpack-plugin');
-var autoprefixer = require('autoprefixer');
-var path = require('path');
-var argv = require('yargs').argv;
+const CleanPlugin = require('clean-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
+const autoprefixer = require('autoprefixer');
+const path = require('path');
+const argv = require('yargs').argv;
 
-var sourceMapPrefix = argv.d ? '?sourceMap' : '';
+const sourceMapPrefix = argv.d ? '?sourceMap' : '';
 
 module.exports = {
   entry: './src/scripts/main.js',
@@ -49,9 +49,7 @@ module.exports = {
       }
     ]
   },
-  postcss: function () {
-    return [autoprefixer];
-  },
+  postcss: () => [autoprefixer],
   eslint: {
     configFile: '.eslintrc'
   },

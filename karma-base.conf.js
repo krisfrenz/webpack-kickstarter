@@ -1,4 +1,4 @@
-var webpackConfig = require('./webpack.config');
+const webpackConfig = require('./webpack.config');
 
 webpackConfig.cache = true;
 webpackConfig.devtool = 'inline-source-map';
@@ -21,7 +21,7 @@ webpackConfig.module.preLoaders = [
   }
 ];
 
-module.exports = function (config) {
+module.exports = (config) => {
   config.set({
     frameworks: ['jasmine'],
     files: [
