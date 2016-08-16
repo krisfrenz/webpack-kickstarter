@@ -3,6 +3,3 @@ import '../styles/main.scss';
 
 import headline from 'headline';
 headline();
-
-import {hello} from 'hello';
-console.log(hello());
