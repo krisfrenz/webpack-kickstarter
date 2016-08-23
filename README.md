@@ -6,7 +6,7 @@ Kickstart your web project with a fresh breeze of awesomeness.
 
 * Showcase for Sass compilation with [webpack](http://webpack.github.io/).
 * Write JavaScript in **ES6 syntax** (both in source files *and* in test files). Code gets transpiled to ES5. I added a [hello world test example](https://github.com/isellsoap/webpack-kickstarter/blob/master/test/scripts/hello/index.spec.js) to get you started.
-* Bonus: [ESLint](http://eslint.org/), [stylelint](http://stylelint.io/), [Autoprefixer](https://github.com/postcss/autoprefixer) and some helpful `npm` commands are included.
+* Bonus: [ESLint](http://eslint.org/), [stylelint](http://stylelint.io/), PostCSS plugins like [Autoprefixer](https://github.com/postcss/autoprefixer) and [pxtorem](https://github.com/cuth/postcss-pxtorem), and some helpful `npm` commands are included.
 
 # How to start?
 

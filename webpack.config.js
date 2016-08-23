@@ -1,10 +1,15 @@
+// webpack plugins
 const CleanPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
-const autoprefixer = require('autoprefixer');
+
+// postcss plugins
+const postcssAutoprefixer = require('autoprefixer');
+const postcssPxtorem = require('postcss-pxtorem');
+
+// other stuff
 const path = require('path');
 const argv = require('yargs').argv;
-
 const sourceMapPrefix = argv.d ? '?sourceMap' : '';
 
 module.exports = {
@@ -49,7 +54,12 @@ module.exports = {
       }
     ]
   },
-  postcss: () => [autoprefixer],
+  postcss: () => [
+    postcssAutoprefixer,
+    postcssPxtorem({
+      propWhiteList: []
+    })
+  ],
   eslint: {
     configFile: '.eslintrc'
   },
