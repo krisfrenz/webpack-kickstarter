@@ -74,5 +74,8 @@ module.exports = {
   resolve: {
     root: path.resolve('./src/scripts/'),
     extensions: ['', '.js']
+  },
+  node: {
+    __dirname: true
   }
 };
