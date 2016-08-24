@@ -1,6 +1,6 @@
-var baseConfig = require('./karma-base.conf');
+const baseConfig = require('./karma-base.conf');
 
-module.exports = function (config) {
+module.exports = (config) => {
   baseConfig(config);
 
   config.set({
